@@ -5,74 +5,74 @@ When amending the constitution (`/memory/constitution.md`), ensure all dependent
 ## Templates to Update
 
 ### When adding/modifying ANY article:
-- [ ] `/templates/plan-template.md` - Update Constitution Check section
-- [ ] `/templates/spec-template.md` - Update if requirements/scope affected
-- [ ] `/templates/tasks-template.md` - Update if new task types needed
-- [ ] `/.claude/commands/plan.md` - Update if planning process changes
-- [ ] `/.claude/commands/tasks.md` - Update if task generation affected
-- [ ] `/CLAUDE.md` - Update runtime development guidelines
+- [ ] `/templates/plan-template.md` - 憲法チェックセクションを更新
+- [ ] `/templates/spec-template.md` - 要件/範囲に影響がある場合に更新
+- [ ] `/templates/tasks-template.md` - 新しいタスクタイプが必要な場合に更新
+- [ ] `/.claude/commands/plan.md` - 計画プロセスが変更された場合に更新
+- [ ] `/.claude/commands/tasks.md` - タスク生成に影響がある場合に更新
+- [ ] `/CLAUDE.md` - ランタイム開発ガイドラインを更新
 
 ### Article-specific updates:
 
 #### Article I (Library-First):
-- [ ] Ensure templates emphasize library creation
-- [ ] Update CLI command examples
-- [ ] Add llms.txt documentation requirements
+- [ ] テンプレートがライブラリ作成を強調することを確認
+- [ ] CLIコマンド例を更新
+- [ ] llms.txtドキュメント要件を追加
 
 #### Article II (CLI Interface):
-- [ ] Update CLI flag requirements in templates
-- [ ] Add text I/O protocol reminders
+- [ ] テンプレート内のCLIフラグ要件を更新
+- [ ] テキストI/Oプロトコルのリマインダーを追加
 
 #### Article III (Test-First):
-- [ ] Update test order in all templates
-- [ ] Emphasize TDD requirements
-- [ ] Add test approval gates
+- [ ] すべてのテンプレートでテスト順序を更新
+- [ ] TDD要件を強調
+- [ ] テスト承認ゲートを追加
 
 #### Article IV (Integration Testing):
-- [ ] List integration test triggers
-- [ ] Update test type priorities
-- [ ] Add real dependency requirements
+- [ ] 統合テストトリガーをリスト
+- [ ] テストタイプの優先順位を更新
+- [ ] 実際の依存関係要件を追加
 
 #### Article V (Observability):
-- [ ] Add logging requirements to templates
-- [ ] Include multi-tier log streaming
-- [ ] Update performance monitoring sections
+- [ ] テンプレートにログ要件を追加
+- [ ] マルチティアログストリーミングを含める
+- [ ] パフォーマンス監視セクションを更新
 
 #### Article VI (Versioning):
-- [ ] Add version increment reminders
-- [ ] Include breaking change procedures
-- [ ] Update migration requirements
+- [ ] バージョンインクリメントのリマインダーを追加
+- [ ] 破壊的変更手順を含める
+- [ ] 移行要件を更新
 
 #### Article VII (Simplicity):
-- [ ] Update project count limits
-- [ ] Add pattern prohibition examples
-- [ ] Include YAGNI reminders
+- [ ] プロジェクト数制限を更新
+- [ ] パターン禁止の例を追加
+- [ ] YAGNIリマインダーを含める
 
 ## Validation Steps
 
 1. **Before committing constitution changes:**
-   - [ ] All templates reference new requirements
-   - [ ] Examples updated to match new rules
-   - [ ] No contradictions between documents
+   - [ ] すべてのテンプレートが新しい要件を参照している
+   - [ ] 例が新しいルールに一致するように更新されている
+   - [ ] 文書間に矛盾がない
 
 2. **After updating templates:**
-   - [ ] Run through a sample implementation plan
-   - [ ] Verify all constitution requirements addressed
-   - [ ] Check that templates are self-contained (readable without constitution)
+   - [ ] サンプル実装計画を実行する
+   - [ ] すべての憲法要件が対応されていることを確認する
+   - [ ] テンプレートが自己完結していることを確認する（憲法なしで読める）
 
 3. **Version tracking:**
-   - [ ] Update constitution version number
-   - [ ] Note version in template footers
-   - [ ] Add amendment to constitution history
+   - [ ] 憲法バージョン番号を更新
+   - [ ] テンプレートフッターにバージョンを記載
+   - [ ] 憲法履歴に改正を追加
 
 ## Common Misses
 
 Watch for these often-forgotten updates:
-- Command documentation (`/commands/*.md`)
-- Checklist items in templates
-- Example code/commands
-- Domain-specific variations (web vs mobile vs CLI)
-- Cross-references between documents
+- コマンドドキュメント（`/commands/*.md`）を更新
+- テンプレート内のチェックリスト項目
+- 例のコード/コマンド
+- ドメイン固有のバリエーション（ウェブ vs モバイル vs CLI）
+- 文書間の相互参照
 
 ## Template Sync Status
 

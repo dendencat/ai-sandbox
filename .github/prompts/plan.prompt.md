@@ -1,39 +1,39 @@
 # Plan how to implement the specified feature
 
+指定された機能をどのように実装するかを計画してください。
 
-Plan how to implement the specified feature.
+これは、Spec-Driven Developmentライフサイクルの2番目のステップです。
 
-This is the second step in the Spec-Driven Development lifecycle.
+引数として提供された実装詳細に基づいて、以下のことを行ってください：
 
-Given the implementation details provided as an argument, do this:
+1. リポジトリのルートから `scripts/setup-plan.sh --json` を実行し、JSONを解析して FEATURE_SPEC、IMPL_PLAN、SPECS_DIR、BRANCH を取得します。今後のすべてのファイルパスは絶対パスでなければなりません。
+2. 機能仕様を読み取り、分析して以下の点を理解します：
+   - 機能要件とユーザーストーリー
+   - 機能要件と非機能要件
+   - 成功基準と受け入れ基準
+   - 言及されている技術的制約や依存関係
 
-1. Run `scripts/setup-plan.sh --json` from the repo root and parse JSON for FEATURE_SPEC, IMPL_PLAN, SPECS_DIR, BRANCH. All future file paths must be absolute.
-2. Read and analyze the feature specification to understand:
-   - The feature requirements and user stories
-   - Functional and non-functional requirements
-   - Success criteria and acceptance criteria
-   - Any technical constraints or dependencies mentioned
+3. `/memory/constitution.md` の憲法を読み取り、憲法上の要件を理解します。
 
-3. Read the constitution at `/memory/constitution.md` to understand constitutional requirements.
+4. 実装計画テンプレートを実行します：
+   - `/templates/plan-template.md` をロードします（すでに IMPL_PLAN パスにコピー済み）
+   - 入力パスを FEATURE_SPEC に設定します
+   - Execution Flow (main) 関数のステップ1-10を実行します
+   - テンプレートは自己完結型で実行可能です
+   - 指定されたエラーハンドリングとゲートチェックに従います
+   - $SPECS_DIR でのアーティファクト生成をテンプレートに任せます：
+     * Phase 0 は research.md を生成します
+     * Phase 1 は data-model.md、contracts/、quickstart.md を生成します
+     * Phase 2 は tasks.md を生成します
+   - 引数から提供されたユーザーの詳細を Technical Context: $ARGUMENTS に組み込みます
+   - 各フェーズを完了するごとに Progress Tracking を更新します
 
-4. Execute the implementation plan template:
-   - Load `/templates/plan-template.md` (already copied to IMPL_PLAN path)
-   - Set Input path to FEATURE_SPEC
-   - Run the Execution Flow (main) function steps 1-10
-   - The template is self-contained and executable
-   - Follow error handling and gate checks as specified
-   - Let the template guide artifact generation in $SPECS_DIR:
-     * Phase 0 generates research.md
-     * Phase 1 generates data-model.md, contracts/, quickstart.md
-     * Phase 2 generates tasks.md
-   - Incorporate user-provided details from arguments into Technical Context: $ARGUMENTS
-   - Update Progress Tracking as you complete each phase
+5. 実行が完了したことを確認します：
+   - Progress Tracking がすべてのフェーズが完了していることを確認します
+   - すべての必要なアーティファクトが生成されたことを確認します
+   - 実行に ERROR 状態がないことを確認します
 
-5. Verify execution completed:
-   - Check Progress Tracking shows all phases complete
-   - Ensure all required artifacts were generated
-   - Confirm no ERROR states in execution
+6. ブランチ名、ファイルパス、生成されたアーティファクトとともに結果を報告します。
 
-6. Report results with branch name, file paths, and generated artifacts.
+パス問題を避けるため、すべてのファイル操作でリポジトリルートからの絶対パスを使用してください。
 
-Use absolute paths with the repository root for all file operations to avoid path issues.
